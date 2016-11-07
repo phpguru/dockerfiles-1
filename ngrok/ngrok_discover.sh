@@ -19,8 +19,18 @@ else
 fi
 
 case "$1" in
-  -h|help)  ARGS=$1 ;;
-  *)        ARGS="--config /ngrok.yml -subdomain=$NGROK_SUBDOMAIN $FWD" ;;
+  -h|help)
+    ARGS=$1
+    ;;
+  *)
+    ARGS="--config /ngrok.yml"
+
+    if [ ! -z "$NGROK_SUBDOMAIN" ]; then
+      ARGS="$ARGS -subdomain=$NGROK_SUBDOMAIN"
+    fi
+
+    ARGS="$ARGS $FWD"
+    ;;
 esac
 
 sed -i "s/^authtoken:.*/authtoken: $NGROK_TOKEN/g" /ngrok.yml
