@@ -14,7 +14,7 @@ declare -a IMAGES=(
   "artisan-queue:7.0.12"
   "artisan-schedule:7.0.12"
   "beanstalkd:1.10"
-  "beanstalkd-console:1.7.5"
+  "beanstalkd-console:1.7.6"
   "nginx:1.11.5"
   "ngrok:2.1.14"
 )

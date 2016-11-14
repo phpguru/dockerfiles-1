@@ -1,7 +1,7 @@
 FROM php:7.0.12-alpine
 MAINTAINER Andrew Ellis <awellis89@gmail.com>
 
-ENV VERSION="70a2ed669cc01bfccb4be01e9ad124649ae41d72"
+ENV VERSION="22bdad4843ddff97aed90d058ce785511ae7b05b"
 
 RUN apk --update add --virtual build-dependencies \
         curl \
