@@ -1,4 +1,4 @@
-FROM ellisio/php:7.0.12
+FROM ellisio/php:7.1.0RC6
 MAINTAINER Andrew Ellis <awellis89@gmail.com>
 
 ADD entrypoint.sh /entrypoint.sh
