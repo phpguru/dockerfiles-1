@@ -15,8 +15,8 @@ declare -a IMAGES=(
   "artisan-schedule:7.1.0RC6"
   "beanstalkd:1.10"
   "beanstalkd-console:1.7.6"
-  "nginx:1.11.5"
-  "ngrok:2.1.14"
+  "nginx:1.11.6"
+  "ngrok:2.1.18"
 )
 
 for i in "${!IMAGES[@]}"
