@@ -1,4 +1,4 @@
-FROM php:7.1.0RC6-alpine
+FROM php:7.1.0-alpine
 MAINTAINER Andrew Ellis <awellis89@gmail.com>
 
 ENV VERSION="22bdad4843ddff97aed90d058ce785511ae7b05b"
