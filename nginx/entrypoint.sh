@@ -33,4 +33,9 @@ if [ ! -z "$CONFIGURE_KUBERNETES" ]; then
   done
 fi
 
+if [ ! -z "$DISABLE_SENDFILE" ]; then
+  sed -ir "s/sendfile.*/sendfile off;/g" /etc/nginx/conf.d/nginx.conf
+  sed -ir "s/tcp_nopush.*/tcp_nopush off;/g" /etc/nginx/conf.d/nginx.conf
+fi
+
 exec "$@"

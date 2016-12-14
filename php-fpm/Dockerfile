@@ -16,7 +16,12 @@ RUN apk --update add --virtual build-dependencies \
         libpng-dev \
         hiredis-dev \
         zlib-dev \
-    && docker-php-ext-install pdo_mysql \
+        imap-dev \
+        icu-dev \
+        libxml2-dev \
+        libmcrypt-dev \
+        postgresql-dev \
+    && docker-php-ext-install pdo_mysql soap intl imap bcmath zip mcrypt pgsql opcache \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install gd \
     && git clone https://github.com/nrk/phpiredis.git \
